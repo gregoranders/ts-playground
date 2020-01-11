@@ -1,0 +1,62 @@
+{
+  "name": "ts-playground",
+  "version": "0.0.1",
+  "description": "TypeScript Playground",
+  "main": "dist/index.js",
+  "scripts": {
+    "clear": "rimraf ./node_modules ./dist ./coverage ./package-lock.json",
+    "start": "ts-node ./src/index.ts",
+    "prebuild": "tslint --project ./",
+    "build": "ncc build src/index.ts -m -o ./dist",
+    "test": "jest",
+    "watch": "tsc -w -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregoranders/ts-playground.git"
+  },
+  "keywords": [
+    "jest",
+    "typescript"
+  ],
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.ts",
+      "!**/node_modules/**",
+      "!**/coverage/**"
+    ],
+    "coverageReporters": [
+      "text",
+      "text-summary"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "\\.ts$": "ts-jest"
+    },
+    "testRegex": "/src/.*\\.spec\\.ts$"
+  },
+  "author": "Gregor Anders <gregor.anders@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gregoranders/ts-playground/issues"
+  },
+  "homepage": "https://gregoranders.github.io/ts-playground/",
+  "dependencies": {
+    "@actions/core": "1.2.1",
+    "@actions/github": "2.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.25",
+    "@zeit/ncc": "0.21.0",
+    "jest": "24.9.0",
+    "rimraf": "3.0.0",
+    "ts-jest": "24.3.0",
+    "ts-node": "8.6.1",
+    "tslint": "5.20.1",
+    "typescript": "3.7.4"
+  }
+}
