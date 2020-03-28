@@ -23,7 +23,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: nodejs project information
       id: projectinfo
-      uses: gregoranders/nodejs-project-info@0.0.2
+      uses: gregoranders/nodejs-project-info@0.0.1
     - name: create release action
       id: createrelease
       uses: gregoranders/nodejs-create-release@0.0.1
