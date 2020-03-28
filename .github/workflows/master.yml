@@ -23,10 +23,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: nodejs project information
       id: projectinfo
-      uses: gregoranders/nodejs-project-info
+      uses: gregoranders/nodejs-project-info@0.0.2
     - name: create release action
       id: createrelease
-      uses: gregoranders/nodejs-create-release
+      uses: gregoranders/nodejs-create-release@0.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PACKAGE_JSON: ${{ steps.projectinfo.outputs.context }}
