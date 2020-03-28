@@ -21,6 +21,20 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: nodejs project information
+      id: projectinfo
+      uses: gregoranders/nodejs-project-info
+    - name: create release action
+      id: createrelease
+      uses: gregoranders/nodejs-create-release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PACKAGE_JSON: ${{ steps.projectinfo.outputs.context }}
+      with:
+        tag: v${{ steps.projectinfo.outputs.version }}
+        name: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }}
+        body: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }} Release
+        target: ${{ github.ref }}
     - name: npm install
       run: |
         npm install
