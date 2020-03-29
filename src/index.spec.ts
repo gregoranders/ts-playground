@@ -6,7 +6,9 @@ describe("index.ts", () => {
 
     const testData: { [key: string]: string } = {
       "/development": "development",
+      "/development/": "development",
       "development": "development",
+      "development/": "development",
       "refs/heads/development": "development",
       "refs/tags/refs/heads/development": "development",
     };

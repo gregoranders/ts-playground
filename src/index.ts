@@ -1,7 +1,9 @@
+
 const strip: RegExp[] = [
   /^refs\/tags\//,
   /^refs\/heads\//,
   /^\//,
+  /\/$/,
 ];
 
 export const normalizeBranchName = (branch: string) => {
