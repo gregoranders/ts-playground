@@ -1,0 +1,10 @@
+plugins:
+  editorconfig:
+    enabled: true
+  tslint:
+    enabled: true
+    config: tslint.json
+  fixme:
+    enabled: true
+  git-legal:
+    enabled: true

@@ -23,18 +23,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: nodejs project information
       id: projectinfo
-      uses: gregoranders/nodejs-project-info@v0.0.2
-    - name: create release action
-      id: createrelease
-      uses: gregoranders/nodejs-create-release@v0.0.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PACKAGE_JSON: ${{ steps.projectinfo.outputs.context }}
-      with:
-        tag: v${{ steps.projectinfo.outputs.version }}
-        name: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }}
-        body: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }} Release
-        target: ${{ github.ref }}
+      uses: gregoranders/nodejs-project-info@v0.0.3
     - name: npm install
       run: |
         npm install
@@ -66,3 +55,14 @@ jobs:
       with:
         coverageCommand: npm run test
         debug: true
+    - name: create release
+      id: createrelease
+      uses: gregoranders/nodejs-create-release@v0.0.3
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PACKAGE_JSON: ${{ steps.projectinfo.outputs.context }}
+      with:
+        tag: v${{ steps.projectinfo.outputs.version }}
+        name: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }}
+        body: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }} Release
+        target: ${{ github.ref }}
