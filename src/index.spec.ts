@@ -1,16 +1,15 @@
-import { normalizeBranchName } from "./index";
+import { normalizeBranchName } from './index';
 
-describe("index.ts", () => {
-
-  describe("normalizeBranchName", () => {
-
+describe('index.ts', () => {
+  describe('normalizeBranchName', () => {
     const testData: { [key: string]: string } = {
-      "/development": "development",
-      "/development/": "development",
-      "development": "development",
-      "development/": "development",
-      "refs/heads/development": "development",
-      "refs/tags/refs/heads/development": "development",
+      '/development': 'development',
+      '/development/': 'development',
+      // eslint-disable-next-line prettier/prettier
+      'development': 'development',
+      'development/': 'development',
+      'refs/heads/development': 'development',
+      'refs/tags/refs/heads/development': 'development',
     };
 
     const tests = Object.keys(testData);
@@ -21,6 +20,5 @@ describe("index.ts", () => {
         return expect(normalizeBranchName(test)).toEqual(expected);
       });
     });
-
   });
 });
