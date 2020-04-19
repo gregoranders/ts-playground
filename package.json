@@ -6,7 +6,7 @@
   "scripts": {
     "clear": "rimraf ./node_modules ./dist ./coverage ./package-lock.json",
     "start": "ts-node ./src/index.ts",
-    "prebuild": "tsc --noEmit --project ./ && eslint './src/**/*.ts' --quiet --fix",
+    "prebuild": "tsc --noEmit --project ./ && eslint ./src/**/*.ts --quiet --fix",
     "build": "ncc build src/index.ts -m -o ./dist",
     "test": "jest",
     "watch": "tsc -w -p ."
@@ -21,7 +21,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "tsc --noEmit --project ./ && eslint './src/**/*.ts' --quiet"
+      "pre-commit": "tsc --noEmit --project ./ && eslint ./src/**/*.ts --quiet"
     }
   },
   "jest": {
