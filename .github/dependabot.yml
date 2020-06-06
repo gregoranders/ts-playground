@@ -11,4 +11,4 @@ updates:
       prefix: 'npm'
     assignees:
       - 'octocat'
-    target-branch: 'develop'
+    target-branch: 'development'
