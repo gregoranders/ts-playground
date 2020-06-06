@@ -67,7 +67,7 @@ jobs:
           target: ${{ github.ref }}
           draft: false
       - name: upload asset
-        if: matrix.os == 'ubuntu-latest'
+        if: matrix.os == 'ubuntu-latest' && matrix.node-version == '12.x'
         id: uploadasset
         uses: gregoranders/nodejs-upload-asset@v0.0.6
         env:
