@@ -10,7 +10,7 @@
 
 [![Development Build][development-build-image]][development-url] [![Test Coverage][development-coveralls-image]][development-coveralls-url] [![Development Version][development-version-image]][development-version-url]
 
-[![Master Build](https://circleci.com/gh/gregoranders/ts-playground/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/gregoranders/ts-playground)
+[![Master Build](https://circleci.com/gh/gregoranders/ts-playground/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/gregoranders/ts-playground) [![Development Build](https://circleci.com/gh/gregoranders/ts-playground/tree/development.svg?style=shield)](https://app.circleci.com/pipelines/github/gregoranders/ts-playground)
 
 [![Code maintainability][code-maintainability-image]][code-maintainability-url] [![Code issues][code-issues-image]][code-issues-url] [![Code Technical Debt][code-tech-debt-image]][code-tech-debt-url]
 
