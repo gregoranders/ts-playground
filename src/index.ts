@@ -1,6 +1,6 @@
 const strip: RegExp[] = [/^refs\/tags\//, /^refs\/heads\//, /^\//, /\/$/];
 
-export const normalizeBranchName = (branch: string) => {
+export const normalizeBranchName = (branch: string): string => {
   let clean = branch;
   strip.forEach((regex) => {
     clean = clean.replace(regex, '');
