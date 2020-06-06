@@ -21,7 +21,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "tsc --noEmit --project ./ && eslint ./src/**/*.ts --quiet"
+      "pre-commit": "tsc --noEmit --project ./ && eslint ./src/**/*.ts --quiet && npm run test"
     }
   },
   "jest": {
@@ -65,9 +65,9 @@
   },
   "devDependencies": {
     "@types/jest": "25.2.3",
-    "@zeit/ncc": "0.22.3",
     "@typescript-eslint/eslint-plugin": "3.1.0",
     "@typescript-eslint/parser": "3.1.0",
+    "@zeit/ncc": "0.22.3",
     "eslint": "7.2.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-prettier": "3.1.3",
