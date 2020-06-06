@@ -1,9 +1,9 @@
-name: Master CI
+name: Release CI
 
 on:
-  push:
-    branches:
-      - master
+  release:
+    types:
+      - edited
 
 jobs:
   build:
@@ -66,3 +66,13 @@ jobs:
           body: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }} Release
           target: ${{ github.ref }}
           draft: false
+      - name: upload asset
+        if: matrix.os == 'ubuntu-latest'
+        id: uploadasset
+        uses: gregoranders/nodejs-upload-asset@v0.0.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          id: ${{ steps.createrelease.outputs.id }}
+          path: dist/index.js
+          name: index.js
