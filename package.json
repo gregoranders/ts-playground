@@ -29,7 +29,7 @@
     "dist"
   ],
   "scripts": {
-    "clear": "rimraf ./dist ./temp ./node_modules ./package-lock.json",
+    "clear": "rimraf ./dist/* ./temp/* ./node_modules ./package-lock.json",
     "start": "ts-node ./src/index.ts",
     "prebuild": "eslint",
     "build": "cross-env NODE_ENV=production tsc --project ./",
