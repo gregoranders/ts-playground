@@ -19,6 +19,7 @@
   "keywords": [
     "api-documenter",
     "api-extractor",
+    "ci",
     "jest",
     "typescript"
   ],
@@ -26,7 +27,10 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "docs",
+    "CHANGELOG.md",
+    "SECURITY.md"
   ],
   "scripts": {
     "clear": "rimraf ./dist/* ./temp/* ./node_modules ./package-lock.json",
