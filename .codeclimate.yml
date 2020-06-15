@@ -14,5 +14,10 @@ plugins:
   git-legal:
     enabled: true
 exclude_patterns:
-  - '**/temp/'
+  - '**/.github'
+  - '**/.circleci'
+  - '**/.vscode'
+  - '**/dist'
+  - '**/temp'
+  - '**/docs'
   - '**/node_modules/'

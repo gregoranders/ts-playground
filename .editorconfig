@@ -8,7 +8,7 @@ root = true
 
 # Change these settings to your own preference
 indent_style = space
-indent_size = 2
+indent_size = 1
 
 # We recommend you to keep these unchanged
 end_of_line = lf
@@ -21,12 +21,12 @@ trim_trailing_whitespace = false
 
 [*.ts]
 indent_style = space
-indent_size = 2
+indent_size = 1
 
 [*.json]
 indent_style = space
-indent_size = 2
+indent_size = 1
 
 [*.yml]
 indent_style = space
-indent_size = 2
+indent_size = 1
