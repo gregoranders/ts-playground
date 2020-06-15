@@ -2,7 +2,9 @@
 
 ##### Chores
 
-* **release:**  prepare next release ([7ea18cbf](https://github.com/gregoranders/ts-playground/commit/7ea18cbf913beb55e01b90a3ad95edd9cf0467af))
+* **release:**
+  *  0.0.11 release ([b0fcac8a](https://github.com/gregoranders/ts-playground/commit/b0fcac8acaa22f0cce15e35e3eb6c412135eeb54))
+  *  prepare next release ([7ea18cbf](https://github.com/gregoranders/ts-playground/commit/7ea18cbf913beb55e01b90a3ad95edd9cf0467af))
 * **dependencies:**  update dependencies ([04c76320](https://github.com/gregoranders/ts-playground/commit/04c7632098eebb5cc75cab3ae641af3f777f1791))
 * **packge:**  move prettier config ([59ef7e52](https://github.com/gregoranders/ts-playground/commit/59ef7e52fe55fa56061089d322a94aca34665ecd))
 
