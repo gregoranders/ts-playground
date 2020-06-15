@@ -2,13 +2,13 @@
 
 ##### Chores
 
-* **package:**  remove tasks ([dddb3ed6](https://github.com/gregoranders/ts-playground/commit/dddb3ed685f01ef799d77d625af8cb5b1ee0142c))
-* **code:**  fix linting ([4e8cd8e8](https://github.com/gregoranders/ts-playground/commit/4e8cd8e87bf87211a942c78efa5be0863a99041b))
-* **release:**  prepare next release ([d727c21f](https://github.com/gregoranders/ts-playground/commit/d727c21f3c357ee2f1aabcc120c94d4ee9dc7f4b))
+- **package:** remove tasks ([dddb3ed6](https://github.com/gregoranders/ts-playground/commit/dddb3ed685f01ef799d77d625af8cb5b1ee0142c))
+- **code:** fix linting ([4e8cd8e8](https://github.com/gregoranders/ts-playground/commit/4e8cd8e87bf87211a942c78efa5be0863a99041b))
+- **release:** prepare next release ([d727c21f](https://github.com/gregoranders/ts-playground/commit/d727c21f3c357ee2f1aabcc120c94d4ee9dc7f4b))
 
 ##### Documentation Changes
 
-* **README:**  update docs ([617caac8](https://github.com/gregoranders/ts-playground/commit/617caac84fa0b75308958fe299028f5c8371f2f8))
+- **README:** update docs ([617caac8](https://github.com/gregoranders/ts-playground/commit/617caac84fa0b75308958fe299028f5c8371f2f8))
 
 #### 0.0.12 (2020-06-15)
 
