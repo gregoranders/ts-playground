@@ -116,5 +116,5 @@ npm run clear
 [circleci-master-image]: https://circleci.com/gh/gregoranders/ts-playground/tree/master.svg?style=shield
 [circleci-development-image]: https://circleci.com/gh/gregoranders/ts-playground/tree/development.svg?style=shield
 [appveyor-url]: https://ci.appveyor.com/project/gregoranders/ts-playground
-[appveyor-master-image]: https://img.shields.io/appveyor/gregoranders/ts-playground/master
-[appveyor-development-image]: https://img.shields.io/appveyor/gregoranders/ts-playground/development
+[appveyor-master-image]: https://img.shields.io/appveyor/build/gregoranders/ts-playground/master
+[appveyor-development-image]: https://img.shields.io/appveyor/build/gregoranders/ts-playground/development
