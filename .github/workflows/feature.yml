@@ -5,6 +5,9 @@ on:
     branches:
       - feature/*
 
+env:
+  CI: true
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -12,10 +15,12 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [12.x, 13.x]
+        node-version: [14.x]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - name: Use Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
         uses: actions/setup-node@v1
         with:
@@ -26,22 +31,15 @@ jobs:
       - name: npm install
         run: |
           npm install
-        env:
-          CI: true
       - name: npm run build
         run: |
           npm run build
-        env:
-          CI: true
       - name: npm test
         run: |
           npm test
-        env:
-          CI: true
       - name: code coverage
+        if: matrix.os == 'ubuntu-latest' && matrix.node-version == '14.x'
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ./coverage/lcov.info
-        env:
-          CI: true
+          path-to-lcov: ./temp/coverage/lcov.info

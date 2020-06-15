@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended", "esnext"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {}
+  },
+  "env": {
+    "node": true
+  },
+  "rules": {},
+  "settings": {},
+  "globals": {}
+}

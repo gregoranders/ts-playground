@@ -1,10 +1,23 @@
+version: '2'
 plugins:
   editorconfig:
-    enabled: false
-  tslint:
     enabled: true
-    config: tslint.json
+  tslint:
+    enabled: false
+  eslint:
+    enabled: true
+    channel: 'eslint-6'
+    config:
+      config: .eslintrc-cc.json
   fixme:
     enabled: true
   git-legal:
     enabled: true
+exclude_patterns:
+  - '**/.github'
+  - '**/.circleci'
+  - '**/.vscode'
+  - '**/dist'
+  - '**/temp'
+  - '**/docs'
+  - '**/node_modules/'

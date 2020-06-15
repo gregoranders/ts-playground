@@ -5,20 +5,25 @@
     }
   ],
   "settings": {
-    "editor.defaultFormatter": "vscode.typescript-language-features",
-    "workbench.colorTheme": "Nord Deep",
-    "workbench.iconTheme": "material-icon-theme",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },
-    "eslint.validate": ["javascript", { "language": "typescript", "autoFix": true }]
+    "editor.tabSize": 2,
+    "editor.wordWrapColumn": 78,
+    "eslint.validate": ["javascript", "typescript"],
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.formatOnSave": false
+    },
+    "[typescript]": {
+      "editor.formatOnSave": false
+    },
+    "files.associations": { "*.json": "jsonc" }
   },
   "extensions": {
     "recommendations": [
       "coenraads.bracket-pair-colorizer",
-      "msjsdiag.debugger-for-chrome",
       "editorconfig.editorconfig",
-      "dsznajder.es7-react-js-snippets",
       "dbaeumer.vscode-eslint",
       "orta.vscode-jest",
       "pkief.material-icon-theme",
