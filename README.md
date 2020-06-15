@@ -1,6 +1,6 @@
 # [TypeScript](http://www.typescriptlang.org/) Playground
 
-This project is a `template` and as such **_`does not`_** offer any usefull code.
+This project is a `template` and as such `DOES NOT` offer any usefull code.
 
 ## [API Docs](./docs/index.md)
 
