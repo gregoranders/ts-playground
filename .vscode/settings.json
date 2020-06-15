@@ -2,12 +2,15 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.validate": ["javascript", { "language": "typescript", "autoFix": true }],
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 78,
+  "eslint.validate": ["javascript", "typescript"],
   "editor.formatOnSave": true,
   "[javascript]": {
     "editor.formatOnSave": false
   },
   "[typescript]": {
     "editor.formatOnSave": false
-  }
+  },
+  "files.associations": { "*.json": "jsonc" }
 }

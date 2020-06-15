@@ -2,37 +2,78 @@
   "name": "ts-playground",
   "version": "0.0.10",
   "description": "TypeScript Playground",
-  "main": "dist/index.js",
-  "scripts": {
-    "clear": "rimraf ./node_modules ./dist ./coverage ./package-lock.json",
-    "start": "ts-node ./src/index.ts",
-    "prebuild": "tsc --noEmit --project ./ && eslint ./src/**/*.ts --quiet --fix",
-    "build": "ncc build src/index.ts -m -o ./dist",
-    "test": "jest",
-    "watch": "tsc -w -p ."
+  "author": "Gregor Anders <gregor.anders@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gregoranders/ts-playground/issues"
   },
+  "homepage": "https://gregoranders.github.io/ts-playground/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gregoranders/ts-playground.git"
   },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": false,
   "keywords": [
+    "api-documenter",
+    "api-extractor",
     "jest",
     "typescript"
   ],
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clear": "rimraf ./dist ./temp ./node_modules ./package-lock.json",
+    "start": "ts-node ./src/index.ts",
+    "prebuild": "eslint",
+    "build": "cross-env NODE_ENV=production tsc --project ./",
+    "lint": "eslint --ext .ts ./src",
+    "test": "jest",
+    "watch": "tsc --watch --project ./",
+    "prepare": "npm test && npm run build && npm run api-extractor && npm run api-documenter && npm run lint",
+    "api-extractor": "api-extractor run --local --verbose",
+    "api-documenter": "api-documenter markdown --input ./docs --output ./docs-tmp && cpx 'docs-tmp/**/*.*' docs && rimraf ./docs-tmp",
+    "codeclimate": "docker run --interactive --tty --rm --env CODECLIMATE_CODE=\"$PWD\" --volume \"$PWD\":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze",
+    "release:major": "npm version major -m \"chore(release): %s \"",
+    "release:minor": "npm version minor -m \"chore(release): %s \"",
+    "release:patch": "npm version patch -m \"chore(release): %s \""
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "tsc --noEmit --project ./ && eslint ./src/**/*.ts --quiet && npm run test"
+      "pre-commit": "lint-staged && npm run prepare",
+      "pre-push": "npm run test"
     }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --ext .ts"
+    ]
+  },
+  "jest-html-reporter": {
+    "pageTitle": "ts-playground",
+    "outputPath": "<rootDir>/temp/index.html"
+  },
+  "jest-junit": {
+    "outputDirectory": "<rootDir>/temp"
   },
   "jest": {
     "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/temp/coverage",
     "collectCoverageFrom": [
-      "**/*.ts",
-      "!**/node_modules/**",
-      "!**/coverage/**"
+      "<rootDir>/src/**/*.ts",
+      "!<rootDir>/node_modules/**",
+      "!<rootDir>/dist/**",
+      "!<rootDir>/temp/**"
     ],
     "coverageReporters": [
       "lcovonly",
+      "html",
       "text",
       "text-summary"
     ],
@@ -44,14 +85,45 @@
         "statements": 100
       }
     },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
     "moduleFileExtensions": [
       "ts",
-      "js"
+      "js",
+      "json"
+    ],
+    "reporters": [
+      "jest-html-reporter",
+      "jest-spec-reporter",
+      "jest-junit"
     ],
     "transform": {
       "\\.ts$": "ts-jest"
     },
     "testRegex": "/src/.*\\.spec\\.ts$"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "prettier",
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {}
+    },
+    "rules": {},
+    "settings": {}
   },
   "prettier": {
     "semi": true,
@@ -60,26 +132,31 @@
     "printWidth": 120,
     "tabWidth": 2
   },
-  "author": "Gregor Anders <gregor.anders@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gregoranders/ts-playground/issues"
-  },
-  "homepage": "https://gregoranders.github.io/ts-playground/",
   "dependencies": {
     "@actions/core": "1.2.4",
-    "@actions/github": "3.0.0"
+    "@actions/github": "3.0.0",
+    "@octokit/core": "3.0.0",
+    "@octokit/rest": "18.0.0"
   },
   "devDependencies": {
+    "@microsoft/api-documenter": "7.8.12",
+    "@microsoft/api-extractor": "7.8.11",
     "@types/jest": "26.0.0",
     "@typescript-eslint/eslint-plugin": "3.2.0",
     "@typescript-eslint/parser": "3.2.0",
-    "@zeit/ncc": "0.22.3",
+    "cpx": "1.5.0",
+    "cross-env": "7.0.2",
     "eslint": "7.2.0",
     "eslint-config-prettier": "6.11.0",
-    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-prettier": "3.1.3",
+    "generate-changelog": "1.8.0",
     "husky": "4.2.5",
     "jest": "26.0.1",
+    "jest-cli": "26.0.1",
+    "jest-html-reporter": "3.1.3",
+    "jest-junit": "10.0.0",
+    "jest-spec-reporter": "1.0.13",
+    "lint-staged": "10.2.10",
     "prettier": "2.0.5",
     "rimraf": "3.0.2",
     "ts-jest": "26.1.0",
