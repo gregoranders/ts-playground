@@ -1,3 +1,15 @@
+#### 0.0.14 (2020-06-15)
+
+##### Chores
+
+* **build:**  trigger ([4b36b78d](https://github.com/gregoranders/ts-playground/commit/4b36b78daf6531280294f366b6c27d98f1962470))
+* **release:**  bump version ([8be47070](https://github.com/gregoranders/ts-playground/commit/8be470708e690b0a4612b16bd7f7a1ae7558b0b5))
+
+##### Documentation Changes
+
+* **README:**  update ([00b348ef](https://github.com/gregoranders/ts-playground/commit/00b348efe30bd1fe2f710405655cf43e44b5c237))
+* **SECURITY:**  update ([4d22333f](https://github.com/gregoranders/ts-playground/commit/4d22333f89cdb1ec0088b55d176482e6ba378aff))
+
 #### 0.0.13 (2020-06-15)
 
 ##### Chores
