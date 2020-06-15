@@ -1,4 +1,6 @@
-[TypeScript](http://www.typescriptlang.org/) Playground
+# [TypeScript](http://www.typescriptlang.org/) Playground
+
+This project is a `template` and does as such not offer any usefull code.
 
 ## [API Docs](./docs/index.md)
 
@@ -13,7 +15,11 @@
 
 - TypeScript
 - Jest Snapshot/Unit Tests with Code Coverage
-- GitHub CI Integration (feature, development, master)
+- API Docs Generation
+- GitHub CI Integration (feature, development, master, release)
+- Travis Integration
+- CircleCI Integration
+- AppVeyor Integration
 - Code Quality via Code Climate
 
 | GitHub                                                           | Travis                                                       | CircleCI                                                         | AppVeyor                                                         | Coveralls                                                                  |                                                                              |
@@ -113,8 +119,8 @@ npm run clear
 [travis-master-image]: https://travis-ci.org/gregoranders/ts-playground.svg?branch=master
 [travis-development-image]: https://travis-ci.org/gregoranders/ts-playground.svg?branch=development
 [circleci-url]: https://app.circleci.com/pipelines/github/gregoranders/ts-playground
-[circleci-master-image]: https://circleci.com/gh/gregoranders/ts-playground/tree/master.svg?style=shield
-[circleci-development-image]: https://circleci.com/gh/gregoranders/ts-playground/tree/development.svg?style=shield
+[circleci-master-image]: https://img.shields.io/circleci/build/github/gregoranders/ts-playground/master
+[circleci-development-image]: https://img.shields.io/circleci/build/github/gregoranders/ts-playground/development
 [appveyor-url]: https://ci.appveyor.com/project/gregoranders/ts-playground
 [appveyor-master-image]: https://img.shields.io/appveyor/build/gregoranders/ts-playground/master
 [appveyor-development-image]: https://img.shields.io/appveyor/build/gregoranders/ts-playground/development

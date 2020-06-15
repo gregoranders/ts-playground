@@ -1,6 +1,6 @@
 {
   "name": "ts-playground",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "TypeScript Playground",
   "author": "Gregor Anders <gregor.anders@gmail.com>",
   "license": "MIT",
@@ -40,13 +40,11 @@
     "lint": "eslint --ext .ts ./src",
     "test": "jest",
     "watch": "tsc --watch --project ./",
-    "prepare": "npm test && npm run build && npm run api-extractor && npm run api-documenter && npm run lint",
+    "prepare": "npm test && npm run build && npm run api-extractor && npm run api-documenter",
     "api-extractor": "api-extractor run --local --verbose",
     "api-documenter": "api-documenter markdown --input ./docs --output ./docs-tmp && cpx 'docs-tmp/**/*.*' docs && rimraf ./docs-tmp",
     "codeclimate": "docker run --interactive --tty --rm --env CODECLIMATE_CODE=\"$PWD\" --volume \"$PWD\":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze",
-    "release:major": "npm version major -m \"chore(release): %s \"",
-    "release:minor": "npm version minor -m \"chore(release): %s \"",
-    "release:patch": "npm version patch -m \"chore(release): %s \""
+    "changelog": "changelog"
   },
   "husky": {
     "hooks": {
@@ -117,8 +115,8 @@
       "@typescript-eslint"
     ],
     "extends": [
-      "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended",
       "prettier/@typescript-eslint"
     ],
     "parserOptions": {

@@ -5,6 +5,7 @@ describe('index', () => {
     const testData: { [key: string]: string } = {
       '/development': 'development',
       '/development/': 'development',
+      // eslint-disable-next-line prettier/prettier
       'development': 'development',
       'development/': 'development',
       'refs/heads/development': 'development',
