@@ -1,11 +1,10 @@
 import { normalizeBranchName } from './index';
 
-describe('index.ts', () => {
+describe('index', () => {
   describe('normalizeBranchName', () => {
     const testData: { [key: string]: string } = {
       '/development': 'development',
       '/development/': 'development',
-      // eslint-disable-next-line prettier/prettier
       'development': 'development',
       'development/': 'development',
       'refs/heads/development': 'development',
@@ -16,7 +15,7 @@ describe('index.ts', () => {
 
     tests.forEach((test) => {
       const expected = testData[test];
-      it(`${test} => ${expected}`, () => {
+      it(`should normalize '${test}' to '${expected}'`, () => {
         return expect(normalizeBranchName(test)).toEqual(expected);
       });
     });

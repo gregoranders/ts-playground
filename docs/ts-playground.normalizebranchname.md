@@ -28,7 +28,7 @@ normalized `branch name`
 
 
 ```ts
-const branch = normalize(`refs/heads/master`);
+const branch = normalizeBranchName(`refs/heads/master`);
 
 expect(branch).toEqual('master');
 

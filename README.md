@@ -1,20 +1,34 @@
 [TypeScript](http://www.typescriptlang.org/) Playground
 
+## [API Docs](./docs/index.md)
+
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![License][license-image]][license-url]
 [![Issues][issues-image]][issues-url]
-
-[![Release Build][release-build-image]][release-url]
-
-[![Master Build][master-build-image]][master-url] [![Master Coverage][master-coveralls-image]][master-coveralls-url] [![Master Version][master-version-image]][master-version-url]
-
-[![Development Build][development-build-image]][development-url] [![Test Coverage][development-coveralls-image]][development-coveralls-url] [![Development Version][development-version-image]][development-version-url]
-
-[![Master Build](https://circleci.com/gh/gregoranders/ts-playground/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/gregoranders/ts-playground) [![Development Build](https://circleci.com/gh/gregoranders/ts-playground/tree/development.svg?style=shield)](https://app.circleci.com/pipelines/github/gregoranders/ts-playground)
-
 [![Code maintainability][code-maintainability-image]][code-maintainability-url] [![Code issues][code-issues-image]][code-issues-url] [![Code Technical Debt][code-tech-debt-image]][code-tech-debt-url]
 
-[![Main Language](https://img.shields.io/github/languages/top/gregoranders/ts-playground)][code-metric-url] [![Languages](https://img.shields.io/github/languages/count/gregoranders/ts-playground)][code-metric-url] [![Code Size](https://img.shields.io/github/languages/code-size/gregoranders/ts-playground)][code-metric-url] [![Repo-Size](https://img.shields.io/github/repo-size/gregoranders/ts-playground)][code-metric-url]
+[![Main Language][language-image]][code-metric-url] [![Languages][languages-image]][code-metric-url] [![Code Size][code-size-image]][code-metric-url] [![Repo-Size][repo-size-image]][code-metric-url]
+
+## Features
+
+- TypeScript
+- Jest Snapshot/Unit Tests with Code Coverage
+- GitHub CI Integration (feature, development, master)
+- Code Quality via Code Climate
+
+| GitHub                                                           | Travis                                                       | CircleCI                                                         | Coveralls                                                                  |                                                                              |
+| ---------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [![ReleaseMaster Build][release-build-image]][release-url]       |                                                              |                                                                  |                                                                            |                                                                              |
+| [![Master Build][master-build-image]][master-url]                | [![Master Build][travis-master-image]][travis-url]           | [![Master Build][circleci-master-image]][circleci-url]           | [![Master Coverage][master-coveralls-image]][master-coveralls-url]         | [![Master Version][master-version-image]][master-version-url]                |
+| [![Development Build][development-build-image]][development-url] | [![Development Build][travis-development-image]][travis-url] | [![Development Build][circleci-development-image]][circleci-url] | [![Test Coverage][development-coveralls-image]][development-coveralls-url] | [![Development Version][development-version-image]][development-version-url] |
+
+## Example
+
+```ts
+const branch = normalizeBranchName(`refs/heads/master`);
+
+expect(branch).toEqual('master');
+```
 
 ### Clone repository
 
@@ -40,6 +54,12 @@ npm run build
 
 ```
 npm test
+```
+
+### Code Climate Checks [docker required](docs/CODECLIMATE.md)
+
+```
+npm run codeclimate
 ```
 
 ### Run
@@ -84,3 +104,13 @@ npm run clear
 [code-issues-image]: https://img.shields.io/codeclimate/issues/gregoranders/ts-playground
 [code-tech-debt-url]: https://codeclimate.com/github/gregoranders/ts-playground/maintainability
 [code-tech-debt-image]: https://img.shields.io/codeclimate/tech-debt/gregoranders/ts-playground
+[language-image]: https://img.shields.io/github/languages/top/gregoranders/ts-playground
+[languages-image]: https://img.shields.io/github/languages/count/gregoranders/ts-playground
+[code-size-image]: https://img.shields.io/github/languages/code-size/gregoranders/ts-playground
+[repo-size-image]: https://img.shields.io/github/repo-size/gregoranders/ts-playground
+[travis-url]: https://travis-ci.org/gregoranders/ts-playground
+[travis-master-image]: https://travis-ci.org/gregoranders/ts-playground.svg?branch=master
+[travis-development-image]: https://travis-ci.org/gregoranders/ts-playground.svg?branch=development
+[circleci-url]: https://app.circleci.com/pipelines/github/gregoranders/ts-playground
+[circleci-master-image]: https://circleci.com/gh/gregoranders/ts-playground/tree/master.svg?style=shield
+[circleci-development-image]: https://circleci.com/gh/gregoranders/ts-playground/tree/development.svg?style=shield

@@ -14,7 +14,7 @@ const strip: RegExp[] = [/^refs\/tags\//, /^refs\/heads\//, /^\//, /\/$/];
  *
  * @example
  * ```ts
- * const branch = normalize(`refs/heads/master`);
+ * const branch = normalizeBranchName(`refs/heads/master`);
  *
  * expect(branch).toEqual('master');
  * ```
