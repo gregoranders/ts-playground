@@ -40,7 +40,7 @@
     "lint": "eslint --ext .ts ./src",
     "test": "jest",
     "watch": "tsc --watch --project ./",
-    "prepare": "npm test && npm run build && npm run api-extractor && npm run api-documenter && npm run lint",
+    "prepare": "npm test && npm run build && npm run api-extractor && npm run api-documenter",
     "api-extractor": "api-extractor run --local --verbose",
     "api-documenter": "api-documenter markdown --input ./docs --output ./docs-tmp && cpx 'docs-tmp/**/*.*' docs && rimraf ./docs-tmp",
     "codeclimate": "docker run --interactive --tty --rm --env CODECLIMATE_CODE=\"$PWD\" --volume \"$PWD\":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze",
