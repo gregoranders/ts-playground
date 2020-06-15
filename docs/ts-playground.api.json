@@ -18,7 +18,7 @@
         {
           "kind": "Function",
           "canonicalReference": "ts-playground!normalizeBranchName:function(1)",
-          "docComment": "/**\n * normalize `branch name`\n *\n * @param branch - `branch name`\n *\n * @returns normalized `branch name`\n *\n * @example\n * ```ts\n * const branch = normalize(`refs/heads/master`);\n *\n * expect(branch).toEqual('master');\n * ```\n *\n * @public\n */\n",
+          "docComment": "/**\n * normalize `branch name`\n *\n * @param branch - `branch name`\n *\n * @returns normalized `branch name`\n *\n * @example\n * ```ts\n * const branch = normalizeBranchName(`refs/heads/master`);\n *\n * expect(branch).toEqual('master');\n * ```\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
