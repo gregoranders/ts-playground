@@ -18,7 +18,7 @@
 
 | GitHub                                                           | Travis                                                       | CircleCI                                                         | Coveralls                                                                  |                                                                              |
 | ---------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [![ReleaseMaster Build][release-build-image]][release-url]       |                                                              |                                                                  |                                                                            |                                                                              |
+| [![ReleaseMaster Build][release-build-image]][release-url]       |                                                              |                                                                  |                                                                            | [![Release][release-image]][release-url]                                     |
 | [![Master Build][master-build-image]][master-url]                | [![Master Build][travis-master-image]][travis-url]           | [![Master Build][circleci-master-image]][circleci-url]           | [![Master Coverage][master-coveralls-image]][master-coveralls-url]         | [![Master Version][master-version-image]][master-version-url]                |
 | [![Development Build][development-build-image]][development-url] | [![Development Build][travis-development-image]][travis-url] | [![Development Build][circleci-development-image]][circleci-url] | [![Test Coverage][development-coveralls-image]][development-coveralls-url] | [![Development Version][development-version-image]][development-version-url] |
 
@@ -91,6 +91,7 @@ npm run clear
 [development-version-image]: https://img.shields.io/github/package-json/v/gregoranders/ts-playground/development
 [issues-url]: https://github.com/gregoranders/ts-playground/issues
 [issues-image]: https://img.shields.io/github/issues-raw/gregoranders/ts-playground.svg
+[release-image]: https://img.shields.io/github/release/gregoranders/ts-playground
 [release-build-image]: https://github.com/gregoranders/ts-playground/workflows/Release%20CI/badge.svg
 [master-build-image]: https://github.com/gregoranders/ts-playground/workflows/Master%20CI/badge.svg
 [development-build-image]: https://github.com/gregoranders/ts-playground/workflows/Development%20CI/badge.svg
