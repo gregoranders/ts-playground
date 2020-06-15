@@ -8,14 +8,17 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },
+    "editor.tabSize": 2,
+    "editor.wordWrapColumn": 78,
     "eslint.validate": ["javascript", "typescript"],
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "files.associations": {
-      "*.json": "jsonc"
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.formatOnSave": false
     },
     "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+      "editor.formatOnSave": false
+    },
+    "files.associations": { "*.json": "jsonc" }
   },
   "extensions": {
     "recommendations": [
