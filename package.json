@@ -59,19 +59,19 @@
   },
   "jest-html-reporter": {
     "pageTitle": "ts-playground",
-    "outputPath": "<rootDir>/temp/index.html"
+    "outputPath": "<rootDir>/test/index.html"
   },
   "jest-junit": {
-    "outputDirectory": "<rootDir>/temp"
+    "outputDirectory": "<rootDir>/test"
   },
   "jest": {
-    "collectCoverage": true,
-    "coverageDirectory": "<rootDir>/temp/coverage",
+    "coverageDirectory": "<rootDir>/test/coverage",
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.ts",
       "!<rootDir>/node_modules/**",
       "!<rootDir>/dist/**",
-      "!<rootDir>/temp/**"
+      "!<rootDir>/temp/**",
+      "!<rootDir>/test/**"
     ],
     "coverageReporters": [
       "lcovonly",
