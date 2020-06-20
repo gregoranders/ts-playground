@@ -3,10 +3,11 @@ name: Release CI
 on:
   release:
     types:
-      - edited
+      - created
 
 env:
   CI: true
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build:
@@ -25,6 +26,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org/'
       - name: nodejs project information
         id: projectinfo
         uses: gregoranders/nodejs-project-info@v0.0.6
@@ -34,6 +36,19 @@ jobs:
       - name: npm run build
         run: |
           npm run build
+
+      # - name: npm publish npm
+      #   run: |
+      #     npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     registry-url: 'https://npm.pkg.github.com'
+      # - run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: create release
         id: createrelease
         uses: gregoranders/nodejs-create-release@v0.0.6
