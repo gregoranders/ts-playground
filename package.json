@@ -33,10 +33,11 @@
     "SECURITY.md"
   ],
   "scripts": {
-    "clear": "rimraf ./dist/* ./temp/* ./node_modules ./package-lock.json",
+    "clear": "rimraf ./dist/* ./temp/* ./test/* ./node_modules ./package-lock.json",
     "start": "ts-node ./src/index.ts",
     "prebuild": "eslint",
     "build": "cross-env NODE_ENV=production tsc --project ./",
+    "postbuild": "eslint --no-eslintrc --config .eslintrc-cc.json --ext js --fix ./dist",
     "lint": "eslint --ext .ts ./src",
     "test": "jest",
     "watch": "tsc --watch --project ./",
@@ -65,7 +66,7 @@
     "outputDirectory": "<rootDir>/test"
   },
   "jest": {
-    "coverage": true,
+    "collectCoverage": true,
     "coverageDirectory": "<rootDir>/test/coverage",
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.ts",
