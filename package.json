@@ -65,6 +65,7 @@
     "outputDirectory": "<rootDir>/test"
   },
   "jest": {
+    "coverage": true,
     "coverageDirectory": "<rootDir>/test/coverage",
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.ts",
@@ -106,26 +107,6 @@
       "\\.ts$": "ts-jest"
     },
     "testRegex": "/src/.*\\.spec\\.ts$"
-  },
-  "eslintConfig": {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "prettier",
-      "@typescript-eslint"
-    ],
-    "extends": [
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended",
-      "prettier/@typescript-eslint"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module",
-      "ecmaFeatures": {}
-    },
-    "rules": {},
-    "settings": {}
   },
   "prettier": {
     "semi": true,
