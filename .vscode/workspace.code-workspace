@@ -8,17 +8,21 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },
-    "editor.tabSize": 2,
-    "editor.wordWrapColumn": 78,
     "eslint.validate": ["javascript", "typescript"],
     "editor.formatOnSave": true,
     "[javascript]": {
       "editor.formatOnSave": false
     },
+    "[javascriptreact]": {
+      "editor.formatOnSave": false
+    },
     "[typescript]": {
       "editor.formatOnSave": false
     },
-    "files.associations": { "*.json": "jsonc" }
+    "[typescriptreact]": {
+      "editor.formatOnSave": false
+    },
+    "files.associations": { "api-extractor.json": "jsonc" }
   },
   "extensions": {
     "recommendations": [
