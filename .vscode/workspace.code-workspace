@@ -3,40 +3,5 @@
     {
       "path": "../"
     }
-  ],
-  "settings": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-    "eslint.validate": ["javascript", "typescript"],
-    "editor.formatOnSave": true,
-    "[javascript]": {
-      "editor.formatOnSave": false
-    },
-    "[javascriptreact]": {
-      "editor.formatOnSave": false
-    },
-    "[typescript]": {
-      "editor.formatOnSave": false
-    },
-    "[typescriptreact]": {
-      "editor.formatOnSave": false
-    },
-    "files.associations": { "api-extractor.json": "jsonc" }
-  },
-  "extensions": {
-    "recommendations": [
-      "coenraads.bracket-pair-colorizer",
-      "editorconfig.editorconfig",
-      "dbaeumer.vscode-eslint",
-      "orta.vscode-jest",
-      "pkief.material-icon-theme",
-      "marlosirapuan.nord-deep",
-      "eg2.vscode-npm-script",
-      "esbenp.prettier-vscode",
-      "rvest.vs-code-prettier-eslint",
-      "pflannery.vscode-versionlens",
-      "visualstudioexptteam.vscodeintellicode"
-    ]
-  }
+  ]
 }
