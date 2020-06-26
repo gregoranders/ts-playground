@@ -1,4 +1,4 @@
-# [TypeScript](http://www.typescriptlang.org/) Playground
+# [<img src="./typescript.svg" />](http://www.typescriptlang.org/) Playground
 
 This project is a `template` and as such `DOES NOT` offer any usefull code.
 
