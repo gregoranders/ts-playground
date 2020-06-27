@@ -9,6 +9,8 @@ This project is a `template` and as such `DOES NOT` offer any usefull code.
 [![Issues][issues-image]][issues-url]
 [![Code maintainability][code-maintainability-image]][code-maintainability-url] [![Code issues][code-issues-image]][code-issues-url] [![Code Technical Debt][code-tech-debt-image]][code-tech-debt-url]
 
+[![Codacy Badge][codacy-imge]][codacy-url]
+
 [![Main Language][language-image]][code-metric-url] [![Languages][languages-image]][code-metric-url] [![Code Size][code-size-image]][code-metric-url] [![Repo-Size][repo-size-image]][code-metric-url]
 
 ## Features
@@ -20,7 +22,7 @@ This project is a `template` and as such `DOES NOT` offer any usefull code.
 - Travis Integration
 - CircleCI Integration
 - AppVeyor Integration
-- Code Quality via Code Climate
+- Code Quality via Code Climate and Codacy
 
 | GitHub                                                           | Travis                                                       | CircleCI                                                         | AppVeyor                                                         | Coveralls                                                                  |                                                                              |
 | ---------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -126,3 +128,5 @@ npm run clear
 [appveyor-development-image]: https://img.shields.io/appveyor/build/gregoranders/ts-playground/development
 [typescript-url]: http://www.typescriptlang.org/
 [jest-url]: https://jestjs.io/
+[codacy-imge]: https://app.codacy.com/project/badge/Grade/ba567567ab7c45eeab91ca4fe03011d4
+[codacy-url]: https://www.codacy.com/manual/gregoranders/ts-playground
