@@ -32,7 +32,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
       - name: nodejs project information
         id: projectinfo
-        uses: gregoranders/nodejs-project-info@v0.0.6
+        uses: gregoranders/nodejs-project-info@master
       - name: npm install
         run: |
           npm install
@@ -54,7 +54,7 @@ jobs:
 
       - name: create release
         id: createrelease
-        uses: gregoranders/nodejs-create-release@v0.0.6
+        uses: gregoranders/nodejs-create-release@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PACKAGE_JSON: ${{ steps.projectinfo.outputs.context }}
@@ -66,7 +66,7 @@ jobs:
           draft: true
       - name: upload index.js
         id: uploadmain
-        uses: gregoranders/nodejs-upload-asset@v0.0.6
+        uses: gregoranders/nodejs-upload-asset@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -75,7 +75,7 @@ jobs:
           name: index.js
       - name: upload index.d.ts
         id: uploadtype
-        uses: gregoranders/nodejs-upload-asset@v0.0.6
+        uses: gregoranders/nodejs-upload-asset@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
