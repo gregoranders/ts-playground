@@ -7,7 +7,10 @@ on:
 
 env:
   CI: true
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_BRANCH: ${{ github.ref }}
+  GITHUB_HEAD_REF: ${{ github.head_ref }}
+  GITHUB_BASE_REF: ${{ github.base_ref }}
+  GITHUB_COMMIT: ${{ github.sha }}
 
 jobs:
   build:
