@@ -2,7 +2,7 @@
 
 This project is a `template` and as such `DOES NOT` offer any usefull code.
 
-## [API Docs](./docs/index.md)
+## [API Docs](./docs/api/index.md)
 
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![License][license-image]][license-url]
@@ -64,7 +64,7 @@ npm run build
 npm test
 ```
 
-### Code Climate Checks [docker required](docs/CODECLIMATE.md)
+### Code Climate Checks [docker required](docs/index.md)
 
 ```
 npm run codeclimate
