@@ -62,6 +62,7 @@ jobs:
         uses: gregoranders/nodejs-create-release@v0.0.6
         env:
           PACKAGE_JSON: ${{ steps.projectinfo.outputs.context }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag: v${{ steps.projectinfo.outputs.version }}
           name: ${{ steps.projectinfo.outputs.version }} Release
