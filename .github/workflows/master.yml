@@ -31,7 +31,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: nodejs project information
         id: projectinfo
-        uses: gregoranders/nodejs-project-info@v0.0.6
+        uses: gregoranders/nodejs-project-info@master
       - name: npm install
         run: |
           npm install
@@ -65,7 +65,7 @@ jobs:
       - name: create release
         if: matrix.os == 'ubuntu-latest' && matrix.node-version == '14.x'
         id: createrelease
-        uses: gregoranders/nodejs-create-release@v0.0.6
+        uses: gregoranders/nodejs-create-release@master
         env:
           PACKAGE_JSON: ${{ steps.projectinfo.outputs.context }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
