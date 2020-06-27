@@ -56,3 +56,9 @@ jobs:
           coverageCommand: npm run test
           coverageLocations: |
             ./test/coverage/lcov.info:lcov
+      - name: run codacy-coverage-reporter
+        if: matrix.os == 'ubuntu-latest' && matrix.node-version == '14.x'
+        uses: codacy/codacy-coverage-reporter-action@master
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ./test/coverage/lcov.info
