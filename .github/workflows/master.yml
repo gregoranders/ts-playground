@@ -7,6 +7,10 @@ on:
 
 env:
   CI: true
+  GITHUB_BRANCH: ${{ github.ref }}
+  GITHUB_HEAD_REF: ${{ github.head_ref }}
+  GITHUB_BASE_REF: ${{ github.base_ref }}
+  GITHUB_COMMIT: ${{ github.sha }}
 
 jobs:
   build:
@@ -42,26 +46,25 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ./temp/coverage/lcov.info
+          path-to-lcov: ./test/coverage/lcov.info
       - name: publish code coverage to code climate
         if: matrix.os == 'ubuntu-latest' && matrix.node-version == '14.x'
         uses: paambaati/codeclimate-action@v2.6.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          coverageCommand: npm test
+          coverageCommand: npm run test
           coverageLocations: |
-            ./temp/coverage/lcov.info:lcov
+            ./test/coverage/lcov.info:lcov
       - name: create release
         if: matrix.os == 'ubuntu-latest' && matrix.node-version == '14.x'
         id: createrelease
         uses: gregoranders/nodejs-create-release@v0.0.6
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PACKAGE_JSON: ${{ steps.projectinfo.outputs.context }}
         with:
           tag: v${{ steps.projectinfo.outputs.version }}
-          name: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }}
+          name: ${{ steps.projectinfo.outputs.version }} Release
           body: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }} Release
           target: ${{ github.ref }}
           draft: true

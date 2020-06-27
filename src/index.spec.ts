@@ -1,4 +1,4 @@
-import { normalizeBranchName } from './index';
+import { normalizeBranchName } from '.';
 
 describe('index', () => {
   describe('normalizeBranchName', () => {

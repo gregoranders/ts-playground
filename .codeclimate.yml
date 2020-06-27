@@ -19,5 +19,6 @@ exclude_patterns:
   - '**/.vscode'
   - '**/dist'
   - '**/temp'
+  - '**/test'
   - '**/docs'
   - '**/node_modules/'

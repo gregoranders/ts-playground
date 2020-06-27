@@ -5,8 +5,7 @@ updates:
     schedule:
       interval: 'daily'
     labels:
-      - 'npm'
-      - 'dependencies'
+      - 'npm dependencies'
     commit-message:
       prefix: 'npm'
     assignees:

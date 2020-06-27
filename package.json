@@ -1,6 +1,6 @@
 {
   "name": "ts-playground",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "TypeScript Playground",
   "author": "Gregor Anders <gregor.anders@gmail.com>",
   "license": "MIT",
@@ -25,7 +25,6 @@
   ],
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "files": [
     "dist",
     "docs",
@@ -33,16 +32,17 @@
     "SECURITY.md"
   ],
   "scripts": {
-    "clear": "rimraf ./dist/* ./temp/* ./node_modules ./package-lock.json",
+    "clear": "rimraf ./dist/* ./temp/* ./test/* ./node_modules ./package-lock.json",
     "start": "ts-node ./src/index.ts",
     "prebuild": "eslint",
     "build": "cross-env NODE_ENV=production tsc --project ./",
+    "postbuild": "eslint --no-eslintrc --config .eslintrc-cc.json --ext js --fix ./dist",
     "lint": "eslint --ext .ts ./src",
     "test": "jest",
     "watch": "tsc --watch --project ./",
-    "prepare": "npm test && npm run build && npm run api-extractor && npm run api-documenter",
-    "api-extractor": "api-extractor run --local --verbose",
-    "api-documenter": "api-documenter markdown --input ./docs --output ./docs-tmp && cpx 'docs-tmp/**/*.*' docs && rimraf ./docs-tmp",
+    "prepare": "npm test && npm run build && npm run docs",
+    "docs": "api-extractor run --local --verbose && api-documenter markdown --input ./dist --output ./docs/api",
+    "postdocs": "eslint --ext ts --fix ./dist",
     "codeclimate": "docker run --interactive --tty --rm --env CODECLIMATE_CODE=\"$PWD\" --volume \"$PWD\":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze",
     "changelog": "changelog"
   },
@@ -59,19 +59,20 @@
   },
   "jest-html-reporter": {
     "pageTitle": "ts-playground",
-    "outputPath": "<rootDir>/temp/index.html"
+    "outputPath": "<rootDir>/test/index.html"
   },
   "jest-junit": {
-    "outputDirectory": "<rootDir>/temp"
+    "outputDirectory": "<rootDir>/test"
   },
   "jest": {
     "collectCoverage": true,
-    "coverageDirectory": "<rootDir>/temp/coverage",
+    "coverageDirectory": "<rootDir>/test/coverage",
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.ts",
       "!<rootDir>/node_modules/**",
       "!<rootDir>/dist/**",
-      "!<rootDir>/temp/**"
+      "!<rootDir>/temp/**",
+      "!<rootDir>/test/**"
     ],
     "coverageReporters": [
       "lcovonly",
@@ -107,26 +108,6 @@
     },
     "testRegex": "/src/.*\\.spec\\.ts$"
   },
-  "eslintConfig": {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "prettier",
-      "@typescript-eslint"
-    ],
-    "extends": [
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended",
-      "prettier/@typescript-eslint"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module",
-      "ecmaFeatures": {}
-    },
-    "rules": {},
-    "settings": {}
-  },
   "prettier": {
     "semi": true,
     "trailingComma": "all",
@@ -137,31 +118,32 @@
   "dependencies": {
     "@actions/core": "1.2.4",
     "@actions/github": "3.0.0",
-    "@octokit/core": "3.0.0",
+    "@octokit/core": "3.1.0",
     "@octokit/rest": "18.0.0"
   },
   "devDependencies": {
-    "@microsoft/api-documenter": "7.8.12",
-    "@microsoft/api-extractor": "7.8.11",
-    "@types/jest": "26.0.0",
-    "@typescript-eslint/eslint-plugin": "3.2.0",
-    "@typescript-eslint/parser": "3.2.0",
-    "cpx": "1.5.0",
+    "@microsoft/api-documenter": "7.8.17",
+    "@microsoft/api-extractor": "7.8.15",
+    "@types/jest": "26.0.3",
+    "@typescript-eslint/eslint-plugin": "3.4.0",
+    "@typescript-eslint/parser": "3.4.0",
     "cross-env": "7.0.2",
-    "eslint": "7.2.0",
+    "eslint": "7.3.1",
     "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-jest": "23.17.1",
     "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-unicorn": "20.1.0",
     "generate-changelog": "1.8.0",
     "husky": "4.2.5",
-    "jest": "26.0.1",
-    "jest-cli": "26.0.1",
+    "jest": "26.1.0",
+    "jest-cli": "26.1.0",
     "jest-html-reporter": "3.1.3",
-    "jest-junit": "10.0.0",
-    "jest-spec-reporter": "1.0.13",
-    "lint-staged": "10.2.10",
+    "jest-junit": "11.0.1",
+    "jest-spec-reporter": "1.0.14",
+    "lint-staged": "10.2.11",
     "prettier": "2.0.5",
     "rimraf": "3.0.2",
-    "ts-jest": "26.1.0",
+    "ts-jest": "26.1.1",
     "ts-node": "8.10.2",
     "typescript": "3.9.5"
   }
