@@ -1,3 +1,24 @@
+#### 0.0.18 (2020-06-27)
+
+##### Build System / Dependencies
+
+- **dependabot:** run once a ([bbd2b27d](https://github.com/gregoranders/ts-playground/commit/bbd2b27d7ec8ecc3bde725dec2622968357b7f09))
+- **actions:** use latest version of action ([cf1bfb61](https://github.com/gregoranders/ts-playground/commit/cf1bfb61010a014e1acd7f1a7d23e17c8f808385))
+- **github:** add pull request template ([e28115af](https://github.com/gregoranders/ts-playground/commit/e28115afaecc02b7d96f533adc7eb89219b5ccd3))
+
+##### Chores
+
+- **docs:** shorten changelog and security ([1cab5295](https://github.com/gregoranders/ts-playground/commit/1cab529538f8eb359f3cbec0bee43e5eea188206))
+- **release:** prepare next release ([46cc6894](https://github.com/gregoranders/ts-playground/commit/46cc689418525d55c6de09111d14c572b7b3ffed))
+
+##### Documentation Changes
+
+- **github:** add CONTRIBUTING.md ([15bfbfaf](https://github.com/gregoranders/ts-playground/commit/15bfbfaf901716785835147c8d509e0d7ecb555a))
+
+##### Bug Fixes
+
+- **docs:** fix gh-pages ([490fe9ad](https://github.com/gregoranders/ts-playground/commit/490fe9ad73b2620c070c0a2263821353a44a8d64))
+
 #### 0.0.16 (2020-06-27)
 
 ##### Build System / Dependencies
