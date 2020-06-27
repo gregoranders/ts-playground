@@ -16,3 +16,5 @@ workflows:
   build-and-test:
     jobs:
       - build-and-test
+- store_test_results:
+  path: test/junit.xml
