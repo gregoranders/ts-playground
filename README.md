@@ -1,4 +1,4 @@
-# [<img src="./typescript.svg" />](http://www.typescriptlang.org/) Playground
+# [<img src="./typescript.svg" />][typescript-url] Playground
 
 This project is a `template` and as such `DOES NOT` offer any usefull code.
 
@@ -13,8 +13,8 @@ This project is a `template` and as such `DOES NOT` offer any usefull code.
 
 ## Features
 
-- TypeScript
-- Jest Snapshot/Unit Tests with Code Coverage
+- [TypeScript][typescript-url]
+- [Jest][jest-url] Unit Tests with Code Coverage
 - API Docs Generation
 - GitHub CI Integration (feature, development, master, release)
 - Travis Integration
@@ -56,7 +56,7 @@ npm run build
 
 ### Testing
 
-#### Test using [Jest](https://jestjs.io/)
+#### Test using [Jest][jest-url]
 
 ```
 npm test
@@ -124,3 +124,5 @@ npm run clear
 [appveyor-url]: https://ci.appveyor.com/project/gregoranders/ts-playground
 [appveyor-master-image]: https://img.shields.io/appveyor/build/gregoranders/ts-playground/master
 [appveyor-development-image]: https://img.shields.io/appveyor/build/gregoranders/ts-playground/development
+[typescript-url]: http://www.typescriptlang.org/
+[jest-url]: https://jestjs.io/
