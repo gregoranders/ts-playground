@@ -32,17 +32,21 @@ This commands installs everything which is required for building and testing the
 
 ## Testing
 
-### Unit testing: `npm run test`
+### Unit testing using [Jest][jest-url]
 
 `npm test` executes the unit tests.
 
 ## Building
 
-`npm test` executes the build.
+`npm run build` executes the build.
 
 ## Developing
 
-`npm test` executes the build in watch mode.
+`npm run watch` executes the build in watch mode.
+
+## Ensure code quality [`docker required`](docs/index.md)
+
+`npm run codeclimate` executes the code quality checks
 
 ## Contributing/Submitting changes
 
@@ -59,6 +63,7 @@ This commands installs everything which is required for building and testing the
 - Make your changes
   - Make sure to provide a spec for unit tests.
   - Run your tests with <code>npm test</code>.
+  - Save integration time and run code quality checks locally with <code>npm run codeclimate</code>
   - When all tests pass, everything's fine.
 - Commit your changes
   - Please provide a git message that explains what you've done.
@@ -68,4 +73,4 @@ This commands installs everything which is required for building and testing the
   - Make sure you send the PR to the <code>development</code> branch.
   - CI is watching you!
 
-If you follow these instructions, your PR will land pretty safely in the main repo!
+[jest-url]: https://jestjs.io/

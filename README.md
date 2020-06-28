@@ -38,50 +38,6 @@ const branch = normalizeBranchName(`refs/heads/master`);
 expect(branch).toEqual('master');
 ```
 
-### Clone repository
-
-```
-git clone https://github.com/gregoranders/ts-playground
-```
-
-### Install dependencies
-
-```
-npm install
-```
-
-### Build
-
-```
-npm run build
-```
-
-### Testing
-
-#### Test using [Jest][jest-url]
-
-```
-npm test
-```
-
-### Code Climate Checks [docker required](docs/index.md)
-
-```
-npm run codeclimate
-```
-
-### Run
-
-```
-npm start
-```
-
-### Clear
-
-```
-npm run clear
-```
-
 [release-url]: https://github.com/gregoranders/ts-playground/releases
 [master-url]: https://github.com/gregoranders/ts-playground/tree/master
 [development-url]: https://github.com/gregoranders/ts-playground/tree/development
