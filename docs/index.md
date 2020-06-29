@@ -1,5 +1,7 @@
 # Code Climate on localhost
 
+[Home](../README.md)
+
 ## Docker image sizes
 
 ```sh
