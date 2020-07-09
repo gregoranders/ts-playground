@@ -114,7 +114,7 @@
   },
   "devDependencies": {
     "@microsoft/api-documenter": "7.8.21",
-    "@microsoft/api-extractor": "7.9.1",
+    "@microsoft/api-extractor": "7.9.2",
     "@types/jest": "26.0.4",
     "@typescript-eslint/eslint-plugin": "3.6.0",
     "@typescript-eslint/parser": "3.6.0",
