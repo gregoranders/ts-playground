@@ -1,6 +1,8 @@
-# [<img src="./typescript.svg" />][typescript-url] Playground
+# ts-playground
 
-This project is a `template` and as such `DOES NOT` offer any usefull code.
+# [<img src="./typescript.svg" />][typescript-url] <center style="color: #007ACC;">Playground</center>
+
+## <center>This project is a `template` and as such `DOES NOT` offer any usefull code</center>
 
 ## [API Docs](./docs/api/index.md)
 
@@ -22,7 +24,7 @@ This project is a `template` and as such `DOES NOT` offer any usefull code.
 - Travis Integration
 - CircleCI Integration
 - AppVeyor Integration
-- Code Quality via Code Climate and Codacy
+- Code Quality via [Code Climate](./docs/index.md) and Codacy
 
 | GitHub                                                           | Travis                                                       | CircleCI                                                         | AppVeyor                                                         | Coveralls                                                                  |                                                                              |
 | ---------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
