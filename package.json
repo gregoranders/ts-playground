@@ -113,7 +113,7 @@
     "@octokit/rest": "18.0.3"
   },
   "devDependencies": {
-    "@microsoft/api-documenter": "7.8.35",
+    "@microsoft/api-documenter": "7.8.53",
     "@microsoft/api-extractor": "7.9.10",
     "@types/jest": "26.0.10",
     "@typescript-eslint/eslint-plugin": "3.10.1",
