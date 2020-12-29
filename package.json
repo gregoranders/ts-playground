@@ -44,6 +44,7 @@
     "docs": "api-extractor run --local --verbose && api-documenter markdown --input ./dist --output ./docs/api",
     "postdocs": "cpx './docs/_config.yml' './docs/api/'",
     "codeclimate": "docker run --interactive --tty --rm --env CODECLIMATE_CODE=\"$PWD\" --volume \"$PWD\":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze",
+    "codacy": "docker run --interactive --tty --rm --env CODACY_CODE=\"$CODACY_CODE\" --volume /var/run/docker.sock:/var/run/docker.sock --volume \"$CODACY_CODE\":\"$CODACY_CODE\" --volume /tmp:/tmp codacy/codacy-analysis-cli analyze --verbose --tool eslint",
     "changelog": "changelog"
   },
   "husky": {
