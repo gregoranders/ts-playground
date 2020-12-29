@@ -49,4 +49,3 @@
 
 * **vcode:**  remove unused settings ([1b99bb0c](https://github.com/gregoranders/ts-playground/commit/1b99bb0cfca5661f51ff1cca797cc9b17ea9c4d8))
 * **prettier:**  move configuration ([ea97fd44](https://github.com/gregoranders/ts-playground/commit/ea97fd4423aa3484284fedbc4d703c522469570d))
-
