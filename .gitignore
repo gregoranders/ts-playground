@@ -1,7 +1,8 @@
-dist/*
-temp/*
-test/*
+dist/
 node_modules/
+temp/
+test/
+docs-tmp/
 
 package-lock.json
 

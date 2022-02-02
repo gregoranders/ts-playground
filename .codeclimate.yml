@@ -1,4 +1,8 @@
 version: '2'
+checks:
+  file-lines:
+    config:
+      threshold: 1000
 plugins:
   editorconfig:
     enabled: true
@@ -16,10 +20,13 @@ exclude_patterns:
   - '**/.github'
   - '**/.circleci'
   - '**/.vscode'
+  - '**/*.svg'
+  - '**/*.spec.ts'
   - '**/dist'
   - '**/temp'
   - '**/test'
   - '**/docs'
+  - '**/docs-tmp'
   - '**/node_modules/'
   - '**/.husky'
   - '**/commitlint.config.js'

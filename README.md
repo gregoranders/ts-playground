@@ -4,7 +4,7 @@
 
 ## <center>This project is a `template` and as such `DOES NOT` offer any usefull code</center>
 
-## [API Docs](./docs/api/index.md)
+## [API Docs](./docs/index.md)
 
 [![License][license-image]][license-url]
 [![Issues][issues-image]][issues-url]
@@ -18,12 +18,12 @@
 
 - [TypeScript][typescript-url]
 - [Jest][jest-url] Unit Tests with Code Coverage
-- API Docs Generation
+- [API Docs Generation][api-url]
 - GitHub CI Integration (feature, development, master, release)
-- Travis Integration
-- CircleCI Integration
-- AppVeyor Integration
-- Code Quality via [Code Climate](./docs/index.md) and Codacy
+- [Travis][travis-url] Integration
+- [CircleCI][circleci-url] Integration
+- [AppVeyor][appveyor-url] Integration
+- Code Quality via [Code Climate](./docs/CODECLIMATE.md) and [Codacy][codacy-url]
 
 | GitHub                                                           | Travis                                                       | CircleCI                                                         | AppVeyor                                                         | Coveralls                                                                  |                                                                              |
 | ---------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -85,3 +85,4 @@ expect(branch).toEqual('master');
 [jest-url]: https://jestjs.io/
 [codacy-imge]: https://app.codacy.com/project/badge/Grade/ba567567ab7c45eeab91ca4fe03011d4
 [codacy-url]: https://www.codacy.com/manual/gregoranders/ts-playground
+[api-url]: https://api-extractor.com/

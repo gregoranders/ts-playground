@@ -6,10 +6,7 @@
 
 // @public
 function normalizeBranchName(branch: string): string;
-
 export default normalizeBranchName;
-
 export { normalizeBranchName }
-
 
 ```
