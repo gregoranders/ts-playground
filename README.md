@@ -23,7 +23,7 @@
 - [Travis][travis-url] Integration
 - [CircleCI][circleci-url] Integration
 - [AppVeyor][appveyor-url] Integration
-- Code Quality via [Code Climate](./docs/CODECLIMATE.md) and [Codacy][codacy-url]
+- Code Quality via [Code Climate](./docs/CODECLIMATE.md) and [Codacy](./docs/CODACY.md)
 
 | GitHub                                                           | Travis                                                       | CircleCI                                                         | AppVeyor                                                         | Coveralls                                                                  |                                                                              |
 | ---------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |

@@ -10,6 +10,8 @@ engines:
     enabled: true
   eslint:
     enabled: true
+  tslint:
+    enabled: false
 exclude_paths:
   - '.circleci/**'
   - '.github/**'
