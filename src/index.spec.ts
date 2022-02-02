@@ -14,11 +14,11 @@ describe('index', () => {
 
     const tests = Object.keys(testData);
 
-    tests.forEach((test) => {
+    for (const test of tests) {
       const expected = testData[test];
       it(`should normalize '${test}' to '${expected}'`, () => {
         return expect(normalizeBranchName(test)).toEqual(expected);
       });
-    });
+    }
   });
 });

@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [14.x]
+        node-version: [16.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -36,34 +36,23 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: npm test
+        run: |
+          npm test
       - name: npm run build
         run: |
           npm run build
-
       # - name: npm publish npm
       #   run: |
       #     npm publish
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      # - uses: actions/setup-node@v1
+      # - uses: actions/setup-node@v2
       #   with:
       #     registry-url: 'https://npm.pkg.github.com'
       # - run: npm publish
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: create release
-        id: createrelease
-        uses: gregoranders/nodejs-create-release@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PACKAGE_JSON: ${{ steps.projectinfo.outputs.context }}
-        with:
-          tag: v${{ steps.projectinfo.outputs.version }}
-          name: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }}
-          body: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }} Release
-          target: ${{ github.ref }}
-          draft: true
       - name: upload index.js
         id: uploadmain
         uses: gregoranders/nodejs-upload-asset@master

@@ -1,12 +1,11 @@
 # ts-playground
 
-# [<img src="./typescript.svg" />][typescript-url] <center style="color: #007ACC;">Playground</center>
+## [<img src="./typescript.svg" />][typescript-url] <center style="color: #007ACC;">Playground</center>
 
 ## <center>This project is a `template` and as such `DOES NOT` offer any usefull code</center>
 
 ## [API Docs](./docs/api/index.md)
 
-[![Dependency Status][daviddm-image]][daviddm-url]
 [![License][license-image]][license-url]
 [![Issues][issues-image]][issues-url]
 [![Code maintainability][code-maintainability-image]][code-maintainability-url] [![Code issues][code-issues-image]][code-issues-url] [![Code Technical Debt][code-tech-debt-image]][code-tech-debt-url]
@@ -47,8 +46,6 @@ expect(branch).toEqual('master');
 [code-metric-url]: https://github.com/gregoranders/ts-playground/search?l=TypeScript
 [travis-url]: https://travis-ci.org/gregoranders/ts-playground
 [travis-image]: https://travis-ci.org/gregoranders/ts-playground.svg?branch=master
-[daviddm-url]: https://david-dm.org/gregoranders/ts-playground
-[daviddm-image]: https://david-dm.org/gregoranders/ts-playground.svg?branch=master
 [license-url]: https://github.com/gregoranders/ts-playground/blob/master/LICENSE
 [license-image]: https://img.shields.io/github/license/gregoranders/ts-playground.svg
 [master-version-url]: https://github.com/gregoranders/ts-playground/blob/master/package.json

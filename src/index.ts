@@ -26,9 +26,9 @@ const strip: RegExp[] = [/^refs\/tags\//, /^refs\/heads\//, /^\//, /\/$/];
  */
 export function normalizeBranchName(branch: string): string {
   let clean = branch;
-  strip.forEach((regex) => {
+  for (const regex of strip) {
     clean = clean.replace(regex, '');
-  });
+  }
   return clean;
 }
 
