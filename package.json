@@ -38,7 +38,7 @@
     "api-extractor": "api-extractor run --local --verbose",
     "api-documenter": "api-documenter markdown --input ./dist --output ./docs-tmp && cpx 'docs-tmp/**/*.*' docs",
     "codeclimate": "docker run --interactive --rm --env CODECLIMATE_CODE=\"$PWD\" --volume \"$PWD\":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze",
-    "codacy": "docker run --interactive --tty --rm --env CODACY_CODE=\"$PWD\" --volume \"$PWD\":\"$PWD\" --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp:/tmp codacy/codacy-analysis-cli analyze --directory \"$PWD\"",
+    "codacy": "docker run --interactive --rm --env CODACY_CODE=\"$PWD\" --volume \"$PWD\":\"$PWD\" --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp:/tmp codacy/codacy-analysis-cli analyze --directory \"$PWD\"",
     "changelog": "changelog"
   },
   "keywords": [
