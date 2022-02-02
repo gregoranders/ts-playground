@@ -19,6 +19,9 @@
     "jest": true
   },
   "rules": {
+    "quotes": [
+      2, "single", { "avoidEscape": true }
+    ],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "sort-imports": [
       "error",
