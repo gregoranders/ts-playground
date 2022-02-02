@@ -1,17 +1,15 @@
 ---
 engines:
   duplication:
-    exclude_paths:
-      - config/engines.yml
+    enabled: true
   metric:
-    exclude_paths:
-      - config/engines.yml
+    enabled: true
   remark-int:
-    exclude_paths:
-      - config/engines.yml
+    enabled: true
   coverage:
-    exclude_paths:
-      - config/engines.yml
+    enabled: true
+  eslint:
+    enabled: true
 exclude_paths:
   - '.circleci/**'
   - '.github/**'
