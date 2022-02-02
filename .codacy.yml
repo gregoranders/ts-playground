@@ -1,17 +1,17 @@
 ---
 engines:
   duplication:
-    exclude_paths:
-      - config/engines.yml
+    enabled: true
   metric:
-    exclude_paths:
-      - config/engines.yml
+    enabled: true
   remark-int:
-    exclude_paths:
-      - config/engines.yml
+    enabled: true
   coverage:
-    exclude_paths:
-      - config/engines.yml
+    enabled: true
+  eslint:
+    enabled: true
+  tslint:
+    enabled: false
 exclude_paths:
   - '.circleci/**'
   - '.github/**'
@@ -19,4 +19,4 @@ exclude_paths:
   - '**.json'
   - '**.yml'
   - '**.md'
-  - '**/commitlint.config.js'
+  - 'commitlint.config.js'

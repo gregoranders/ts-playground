@@ -23,7 +23,7 @@
 - [Travis][travis-url] Integration
 - [CircleCI][circleci-url] Integration
 - [AppVeyor][appveyor-url] Integration
-- Code Quality via [Code Climate](./docs/CODECLIMATE.md) and [Codacy][codacy-url]
+- Code Quality via [Code Climate](./docs/CODECLIMATE.md) and [Codacy](./docs/CODACY.md)
 
 | GitHub                                                           | Travis                                                       | CircleCI                                                         | AppVeyor                                                         | Coveralls                                                                  |                                                                              |
 | ---------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -84,5 +84,5 @@ expect(branch).toEqual('master');
 [typescript-url]: http://www.typescriptlang.org/
 [jest-url]: https://jestjs.io/
 [codacy-imge]: https://app.codacy.com/project/badge/Grade/ba567567ab7c45eeab91ca4fe03011d4
-[codacy-url]: https://www.codacy.com/manual/gregoranders/ts-playground
+[codacy-url]: https://app.codacy.com/gh/gregoranders/ts-playground
 [api-url]: https://api-extractor.com/
