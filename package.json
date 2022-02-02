@@ -25,24 +25,24 @@
     "SECURITY.md"
   ],
   "scripts": {
-    "clear": "rimraf ./dist/* ./temp/* ./test/* ./node_modules ./package-lock.json",
+    "clear": "rimraf ./dist/* ./temp/* ./test/* ./node_modules ./package-lock.json ./docs-tmp/* ./etc/*",
     "start": "ts-node ./src/index.ts",
     "prebuild": "eslint ./src/**/*.ts --quiet --fix",
     "build": "cross-env NODE_ENV=production tsc --project ./",
-    "postbuild": "eslint --no-eslintrc --config .eslintrc-cc.json --ext js --fix ./dist",
+    "postbuild": "eslint --no-eslintrc --config .eslintrc-cc.json --ext js --fix ./dist && npm run docs",
     "pretest": "rimraf ./test/*",
     "test": "jest",
     "watch": "tsc --watch --project ./",
     "prepare": "husky install",
-    "docs": "api-extractor run --local --verbose && api-documenter markdown --input ./dist --output ./docs/api",
-    "postdocs": "cpx './docs/_config.yml' './docs/api/'",
+    "docs": "npm run api-extractor && npm run api-documenter",
+    "api-extractor": "api-extractor run --local --verbose",
+    "api-documenter": "api-documenter markdown --input ./dist --output ./docs-tmp && cpx 'docs-tmp/**/*.*' docs",
     "codeclimate": "docker run --interactive --rm --env CODECLIMATE_CODE=\"$PWD\" --volume \"$PWD\":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze",
     "changelog": "changelog"
   },
   "keywords": [
     "api-documenter",
     "api-extractor",
-    "csv",
     "jest",
     "typescript"
   ],
