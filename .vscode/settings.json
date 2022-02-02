@@ -1,6 +1,14 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "files.associations": { "api-extractor.json": "jsonc" }
+  "eslint.validate": ["javascript", "typescript"],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
