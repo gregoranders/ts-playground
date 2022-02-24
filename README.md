@@ -24,16 +24,13 @@
 - [Jest][jest-url] Unit Tests with Code Coverage
 - [API Docs Generation][api-url]
 - GitHub CI Integration (feature, development, master, release)
-- [Travis][travis-url] Integration
-- [CircleCI][circleci-url] Integration
-- [AppVeyor][appveyor-url] Integration
 - Code Quality via [Code Climate](./docs/CODECLIMATE.md) and [Codacy](./docs/CODACY.md)
 
-| GitHub                                                           | Travis                                                       | CircleCI                                                         | AppVeyor                                                         | Coveralls                                                                  |                                                                              |
-| ---------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [![ReleaseMaster Build][release-build-image]][release-url]       |                                                              |                                                                  |                                                                  |                                                                            | [![Release][release-image]][release-url]                                     |
-| [![Master Build][master-build-image]][master-url]                | [![Master Build][travis-master-image]][travis-url]           | [![Master Build][circleci-master-image]][circleci-url]           | [![Master Build][appveyor-master-image]][appveyor-url]           | [![Master Coverage][master-coveralls-image]][master-coveralls-url]         | [![Master Version][master-version-image]][master-version-url]                |
-| [![Development Build][development-build-image]][development-url] | [![Development Build][travis-development-image]][travis-url] | [![Development Build][circleci-development-image]][circleci-url] | [![Development Build][appveyor-development-image]][appveyor-url] | [![Test Coverage][development-coveralls-image]][development-coveralls-url] | [![Development Version][development-version-image]][development-version-url] |
+| GitHub                                                           | Coveralls                                                                  |                                                                              |
+| ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [![ReleaseMaster Build][release-build-image]][release-url]       |                                                                            | [![Release][release-image]][release-url]                                     |
+| [![Master Build][master-build-image]][master-url]                | [![Master Coverage][master-coveralls-image]][master-coveralls-url]         | [![Master Version][master-version-image]][master-version-url]                |
+| [![Development Build][development-build-image]][development-url] | [![Test Coverage][development-coveralls-image]][development-coveralls-url] | [![Development Version][development-version-image]][development-version-url] |
 
 ## Example
 
@@ -46,10 +43,7 @@ expect(branch).toEqual('master');
 [release-url]: https://github.com/gregoranders/ts-playground/releases
 [master-url]: https://github.com/gregoranders/ts-playground/tree/master
 [development-url]: https://github.com/gregoranders/ts-playground/tree/development
-[repository-url]: https://github.com/gregoranders/ts-playground
 [code-metric-url]: https://github.com/gregoranders/ts-playground/search?l=TypeScript
-[travis-url]: https://travis-ci.org/gregoranders/ts-playground
-[travis-image]: https://travis-ci.org/gregoranders/ts-playground.svg?branch=master
 [license-url]: https://github.com/gregoranders/ts-playground/blob/master/LICENSE
 [license-image]: https://img.shields.io/github/license/gregoranders/ts-playground.svg
 [master-version-url]: https://github.com/gregoranders/ts-playground/blob/master/package.json
@@ -76,15 +70,6 @@ expect(branch).toEqual('master');
 [languages-image]: https://img.shields.io/github/languages/count/gregoranders/ts-playground
 [code-size-image]: https://img.shields.io/github/languages/code-size/gregoranders/ts-playground
 [repo-size-image]: https://img.shields.io/github/repo-size/gregoranders/ts-playground
-[travis-url]: https://travis-ci.org/gregoranders/ts-playground
-[travis-master-image]: https://travis-ci.org/gregoranders/ts-playground.svg?branch=master
-[travis-development-image]: https://travis-ci.org/gregoranders/ts-playground.svg?branch=development
-[circleci-url]: https://app.circleci.com/pipelines/github/gregoranders/ts-playground
-[circleci-master-image]: https://img.shields.io/circleci/build/github/gregoranders/ts-playground/master
-[circleci-development-image]: https://img.shields.io/circleci/build/github/gregoranders/ts-playground/development
-[appveyor-url]: https://ci.appveyor.com/project/gregoranders/ts-playground
-[appveyor-master-image]: https://img.shields.io/appveyor/build/gregoranders/ts-playground/master
-[appveyor-development-image]: https://img.shields.io/appveyor/build/gregoranders/ts-playground/development
 [typescript-url]: http://www.typescriptlang.org/
 [jest-url]: https://jestjs.io/
 [codacy-imge]: https://app.codacy.com/project/badge/Grade/ba567567ab7c45eeab91ca4fe03011d4
