@@ -1,0 +1,7 @@
+node-modules/
+docs/ts-*.md
+docs/index.md
+docs-tmp/
+temp/
+etc/
+CHANGELOG.md

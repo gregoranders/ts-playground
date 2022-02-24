@@ -4,19 +4,24 @@
 ## [<img src="./typescript.svg" />][typescript-url] <center style="color: #007ACC;">Playground</center>
 
 <!-- markdownlint-disable-next-line MD013 MD033 -->
-## <center>This project is a `template` and as such `DOES NOT` offer any usefull code</center>
+## <center>This project is a `template` and as such `DOES NOT` offer any useful code</center>
 
 ## [API Docs](./docs/index.md)
 
 [![License][license-image]][license-url]
 [![Issues][issues-image]][issues-url]
 <!-- markdownlint-disable-next-line MD013 -->
-[![Code maintainability][code-maintainability-image]][code-maintainability-url] [![Code issues][code-issues-image]][code-issues-url] [![Code Technical Debt][code-tech-debt-image]][code-tech-debt-url]
+[![Code maintainability][code-maintainability-image]][code-maintainability-url]
+[![Code issues][code-issues-image]][code-issues-url]
+[![Code Technical Debt][code-tech-debt-image]][code-tech-debt-url]
 
 [![Codacy Badge][codacy-imge]][codacy-url]
 
 <!-- markdownlint-disable-next-line MD013 -->
-[![Main Language][language-image]][code-metric-url] [![Languages][languages-image]][code-metric-url] [![Code Size][code-size-image]][code-metric-url] [![Repo-Size][repo-size-image]][code-metric-url]
+[![Main Language][language-image]][code-metric-url]
+[![Languages][languages-image]][code-metric-url]
+[![Code Size][code-size-image]][code-metric-url]
+[![Repository Size][repo-size-image]][code-metric-url]
 
 ## Features
 
@@ -24,14 +29,15 @@
 - [Jest][jest-url] Unit Tests with Code Coverage
 - [API Docs Generation][api-url]
 - GitHub CI Integration (feature, development, master, release)
-- Code Quality via [Code Climate](./docs/CODECLIMATE.md) and [Codacy](./docs/CODACY.md)
+- Code Quality via [Code Climate](./docs/codeclimate.md) and [Codacy](./docs/codacy.md)
 
+<!-- lint disable maximum-line-length -->
 | GitHub                                                           | Coveralls                                                                  |                                                                              |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [![ReleaseMaster Build][release-build-image]][release-url]       |                                                                            | [![Release][release-image]][release-url]                                     |
+| [![Release Build][release-build-image]][release-url]             |                                                                            | [![Release][release-image]][release-url]                                     |
 | [![Master Build][master-build-image]][master-url]                | [![Master Coverage][master-coveralls-image]][master-coveralls-url]         | [![Master Version][master-version-image]][master-version-url]                |
 | [![Development Build][development-build-image]][development-url] | [![Test Coverage][development-coveralls-image]][development-coveralls-url] | [![Development Version][development-version-image]][development-version-url] |
-
+<!-- lint enable maximum-line-length -->
 ## Example
 
 ```ts
