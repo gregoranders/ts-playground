@@ -1,22 +1,26 @@
 ---
 engines:
+  coverage:
+    enabled: true
   duplication:
+    enabled: true
+  eslint:
+    enabled: true
+  markdownlint:
     enabled: true
   metric:
     enabled: true
-  remark-int:
+  remark-lint:
     enabled: true
-  coverage:
-    enabled: true
-  eslint:
+    config: ./.remarkrc
+  stylelint:
     enabled: true
   tslint:
     enabled: false
 exclude_paths:
-  - '.circleci/**'
   - '.github/**'
   - '.vscode/**'
-  - '**.json'
-  - '**.yml'
-  - '**.md'
+  - 'docs/**'
+  - 'docs-tmp/**'
+  - 'CHANGELOG.md'
   - 'commitlint.config.js'
