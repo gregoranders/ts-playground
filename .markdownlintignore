@@ -1,0 +1,7 @@
+etc/**
+docs/**
+docs-tmp/**
+temp/**
+node_modules/**
+CHANGELOG.md
+LICENSE
