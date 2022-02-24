@@ -1,13 +1,9 @@
 version: '2'
-checks:
-  file-lines:
-    config:
-      threshold: 1000
 plugins:
+  duplication:
+    enabled: true
   editorconfig:
     enabled: true
-  tslint:
-    enabled: false
   eslint:
     enabled: true
     config:
@@ -16,17 +12,29 @@ plugins:
     enabled: true
   git-legal:
     enabled: true
+  markdownlint:
+    enabled: true
+    config: .markdownlint.yaml
+  nodesecurity:
+    enabled: true
+  sass-lint:
+    enabled: true
+  scss-lint:
+    enabled: true
+  structure:
+    enabled: true
 exclude_patterns:
   - '**/.github'
-  - '**/.circleci'
+  - '**/.husky'
   - '**/.vscode'
-  - '**/*.svg'
-  - '**/*.spec.ts'
   - '**/dist'
   - '**/temp'
   - '**/test'
   - '**/docs'
   - '**/docs-tmp'
+  - '**/etc'
   - '**/node_modules/'
-  - '**/.husky'
+  - '**/*.svg'
+  - '**/*.md'
+  - '**.*.spec.ts'
   - '**/commitlint.config.js'
