@@ -1,17 +1,21 @@
 # ts-playground
 
+<!-- markdownlint-disable-next-line MD033 -->
 ## [<img src="./typescript.svg" />][typescript-url] <center style="color: #007ACC;">Playground</center>
 
+<!-- markdownlint-disable-next-line MD013 MD033 -->
 ## <center>This project is a `template` and as such `DOES NOT` offer any usefull code</center>
 
 ## [API Docs](./docs/index.md)
 
 [![License][license-image]][license-url]
 [![Issues][issues-image]][issues-url]
+<!-- markdownlint-disable-next-line MD013 -->
 [![Code maintainability][code-maintainability-image]][code-maintainability-url] [![Code issues][code-issues-image]][code-issues-url] [![Code Technical Debt][code-tech-debt-image]][code-tech-debt-url]
 
 [![Codacy Badge][codacy-imge]][codacy-url]
 
+<!-- markdownlint-disable-next-line MD013 -->
 [![Main Language][language-image]][code-metric-url] [![Languages][languages-image]][code-metric-url] [![Code Size][code-size-image]][code-metric-url] [![Repo-Size][repo-size-image]][code-metric-url]
 
 ## Features

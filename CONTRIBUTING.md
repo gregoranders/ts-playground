@@ -71,7 +71,8 @@ This command installs everything which is required for building and testing the 
   - When all tests pass, everything's fine.
 - Commit your changes
   - Please provide a git message that explains what you've done following the [conventional commits][commit-url] pattern.
-  - nodejs-project-info uses [generate-changelog](https://www.npmjs.com/package/generate-changelog), so please make sure your commits follow the [conventional commit][commit-url] pattern.
+  - nodejs-project-info uses [generate-changelog](https://www.npmjs.com/package/generate-changelog),
+    so please make sure your commits follow the [conventional commit][commit-url] pattern.
   - Commit to the forked repository.
   - Sign your commit.
 - Make a pull request

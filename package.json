@@ -30,6 +30,7 @@
     "prebuild": "eslint ./src/**/*.ts --quiet --fix",
     "build": "cross-env NODE_ENV=production tsc --project ./",
     "postbuild": "eslint --no-eslintrc --config .eslintrc-cc.json --ext js --fix ./dist && npm run docs",
+    "lint": "markdownlint --config .markdownlint.yaml --ignore-path .markdownlintignore .",
     "pretest": "rimraf ./test/*",
     "test": "jest",
     "watch": "tsc --watch --project ./",
@@ -50,6 +51,9 @@
   "lint-staged": {
     "*.ts": [
       "eslint --ext .ts"
+    ],
+    "*.md": [
+      "markdownlint --config .markdownlint.yaml --ignore-path .markdownlintignore"
     ]
   },
   "jest-html-reporter": {
@@ -124,6 +128,8 @@
     "jest-junit": "13.0.0",
     "jest-spec-reporter": "1.0.17",
     "lint-staged": "12.3.4",
+    "markdownlint": "0.25.1",
+    "markdownlint-cli": "0.31.1",
     "prettier": "2.5.1",
     "rimraf": "3.0.2",
     "ts-jest": "27.1.3",
