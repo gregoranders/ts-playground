@@ -10,7 +10,7 @@
   "homepage": "https://gregoranders.github.io/ts-playground/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gregoranders/ts-playground.git"
+    "url": "https://github.com/gregoranders/ts-playground.git"
   },
   "engines": {
     "node": ">=12.0"
