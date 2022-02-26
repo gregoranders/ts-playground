@@ -48,7 +48,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           registry-url: 'https://npm.pkg.github.com'
-          scope: 'gregoranders'
       - run: cat /home/runner/work/_temp/.npmrc
       - run: npm ci
       - run: npm publish
