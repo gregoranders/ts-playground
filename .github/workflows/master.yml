@@ -39,6 +39,12 @@ jobs:
       - name: npm run build
         run: |
           npm run build
+      - uses: actions/setup-node@v2
+        with:
+          registry-url: 'https://npm.pkg.github.com'
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: code coverage
         if: matrix.os == 'ubuntu-latest' && matrix.node-version == '16.x'
         uses: coverallsapp/github-action@master
