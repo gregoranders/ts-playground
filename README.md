@@ -15,7 +15,8 @@
 [![Code issues][code-issues-image]][code-issues-url]
 [![Code Technical Debt][code-tech-debt-image]][code-tech-debt-url]
 
-[![Codacy Badge][codacy-imge]][codacy-url]
+[![Codacy Quality Badge][codacy-quality-image]][codacy-url]
+[![Codacy Coverage Badge][codacy-coverage-image]][codacy-url]
 
 <!-- markdownlint-disable-next-line MD013 -->
 [![Main Language][language-image]][code-metric-url]
@@ -78,6 +79,7 @@ expect(branch).toEqual('master');
 [repo-size-image]: https://img.shields.io/github/repo-size/gregoranders/ts-playground
 [typescript-url]: http://www.typescriptlang.org/
 [jest-url]: https://jestjs.io/
-[codacy-imge]: https://app.codacy.com/project/badge/Grade/ba567567ab7c45eeab91ca4fe03011d4
+[codacy-quality-image]: https://app.codacy.com/project/badge/Grade/ba567567ab7c45eeab91ca4fe03011d4
+[codacy-coverage-image]: https://app.codacy.com/project/badge/Coverage/ba567567ab7c45eeab91ca4fe03011d4
 [codacy-url]: https://app.codacy.com/gh/gregoranders/ts-playground
 [api-url]: https://api-extractor.com/
