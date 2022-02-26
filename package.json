@@ -1,6 +1,6 @@
 {
   "name": "ts-playground",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "TypeScript Playground",
   "author": "Gregor Anders <gregor.anders@gmail.com>",
   "license": "MIT",
@@ -38,9 +38,9 @@
     "docs": "npm run api-extractor && npm run api-documenter",
     "api-extractor": "api-extractor run --local --verbose",
     "api-documenter": "api-documenter markdown --input ./dist --output ./docs-tmp && cpx 'docs-tmp/**/*.*' docs",
+    "changelog": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
     "codeclimate": "docker run --interactive --rm --env CODECLIMATE_CODE=\"$PWD\" --volume \"$PWD\":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze",
-    "codacy": "docker run --interactive --rm --env CODACY_CODE=\"$PWD\" --volume \"$PWD\":\"$PWD\" --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp:/tmp codacy/codacy-analysis-cli analyze --directory \"$PWD\"",
-    "changelog": "changelog"
+    "codacy": "docker run --interactive --rm --env CODACY_CODE=\"$PWD\" --volume \"$PWD\":\"$PWD\" --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp:/tmp codacy/codacy-analysis-cli analyze --directory \"$PWD\""
   },
   "keywords": [
     "api-documenter",
@@ -114,15 +114,15 @@
     "@microsoft/api-extractor": "7.19.4",
     "@typescript-eslint/eslint-plugin": "5.12.1",
     "@typescript-eslint/parser": "5.12.1",
+    "conventional-changelog-cli": "2.2.2",
     "cpx": "1.5.0",
     "cross-env": "7.0.3",
     "dictionary-en": "3.1.0",
-    "eslint": "8.9.0",
+    "eslint": "8.10.0",
     "eslint-config-prettier": "8.4.0",
     "eslint-plugin-jest": "26.1.1",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-unicorn": "41.0.0",
-    "generate-changelog": "1.8.0",
     "husky": "7.0.4",
     "jest": "27.5.1",
     "jest-cli": "27.5.1",

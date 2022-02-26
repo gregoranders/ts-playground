@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable unicorn/prefer-module */
-const conventionalCommit = require('./conventionalCommit.json');
+const conventionalCommit = require('./.conventionalCommit.json');
 
 const typesEnum = Object.keys(conventionalCommit.types);
 const scopesEnum = Object.keys(conventionalCommit.scopes);

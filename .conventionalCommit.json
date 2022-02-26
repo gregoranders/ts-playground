@@ -38,8 +38,14 @@
     "codacy": {
       "description": "Changes which affect Codacy integration"
     },
-    "codeclimate": {
+    "codeClimate": {
       "description": "Changes which affect Code Climate integration"
+    },
+    "dependencies": {
+      "description": "Changes which affect dependencies"
+    },
+    "devDependencies": {
+      "description": "Changes which affect development dependencies"
     },
     "github": {
       "description": "Changes which affect GitHub integration"
