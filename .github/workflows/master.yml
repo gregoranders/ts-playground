@@ -78,39 +78,3 @@ jobs:
           body: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }} Release
           target: ${{ github.ref }}
           draft: true
-
-  publish-gpr:
-    needs: build
-
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node-version: [16.x]
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm init -y --scope ${{ github.repository_owner }}
-      - name: npm install
-        run: |
-          npm install
-      - name: npm test
-        run: |
-          npm test
-      - name: npm run build
-        run: |
-          npm run build
-      - uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-          registry-url: https://npm.pkg.github.com/
- #         scope: '@gregoranders/ts-playground'
-      - run: cat /home/runner/work/_temp/.npmrc
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
