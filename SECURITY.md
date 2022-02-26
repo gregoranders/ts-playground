@@ -3,8 +3,9 @@
 ## Supported Versions
 
 | Version | Supported          |
-| ------- | ------------------ |
-| 0.0.29  | :white_check_mark: |
+| :------ | :----------------: |
+| 0.0.30  | :white_check_mark: |
+| 0.0.29  | :x:                |
 | 0.0.28  | :x:                |
 | 0.0.27  | :x:                |
 | 0.0.25  | :x:                |
