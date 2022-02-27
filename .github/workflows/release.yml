@@ -3,7 +3,7 @@ name: Release CI
 on:
   release:
     types:
-      - edited
+      - created
 
 env:
   CI: true
@@ -24,6 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
+          ref: ${{ github.event.release.target_commitish }}
           submodules: recursive
       - name: Use Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
         uses: actions/setup-node@v1
@@ -92,7 +93,6 @@ jobs:
 #           node-version: ${{ matrix.node-version }}
 #           registry-url: https://npm.pkg.github.com/
 #  #         scope: '@gregoranders/ts-playground'
-#       - run: cat /home/runner/work/_temp/.npmrc
 #       - run: npm publish
 #         env:
 #           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
