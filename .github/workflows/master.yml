@@ -77,4 +77,4 @@ jobs:
           name: ${{ steps.projectinfo.outputs.version }} Release
           body: ${{ steps.projectinfo.outputs.name }} - ${{ steps.projectinfo.outputs.version }} Release
           target: ${{ github.ref }}
-          draft: true
+          draft: false
