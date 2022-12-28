@@ -1,3 +1,5 @@
+## [0.0.31](https://github.com/gregoranders/ts-playground/compare/v0.0.30...v0.0.31) (2022-12-28)
+
 ### [0.0.30](https://github.com/gregoranders/ts-playground/compare/v0.0.28...v0.0.30) (2022-02-26)
 
 ### [0.0.28](https://github.com/gregoranders/ts-playground/compare/v0.0.27...v0.0.28) (2022-02-02)
