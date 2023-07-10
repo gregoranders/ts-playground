@@ -27,7 +27,7 @@ jobs:
           ref: ${{ github.event.release.target_commitish }}
           submodules: recursive
       - name: Use Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
-        uses: actions/setup-node@v3.6.0
+        uses: actions/setup-node@v3.7.0
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://registry.npmjs.org/'
