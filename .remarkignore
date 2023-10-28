@@ -1,7 +1,7 @@
 node-modules/
-docs/ts-*.md
-docs/index.md
+docs/
 docs-tmp/
 temp/
 etc/
 CHANGELOG.md
+.github/**

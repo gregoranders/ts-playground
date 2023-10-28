@@ -5,9 +5,7 @@
   },
   "eslint.validate": ["javascript", "typescript"],
   "typescript.tsdk": "node_modules/typescript/lib",
-  "files.associations": {
-    "*.json": "jsonc"
-  },
+  "files.associations": { "api-extractor.json": "jsonc" },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
