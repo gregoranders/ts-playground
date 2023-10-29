@@ -132,8 +132,8 @@ const remarkConfig = {
             retextEquality,
             {
               ignore: [
-                "master",
-                "easy"
+                'master',
+                'easy'
               ]
             }
           ],
@@ -142,12 +142,12 @@ const remarkConfig = {
             retextProfanities,
             {
               ignore: [
-                "executes",
-                "faith",
-                "reject",
-                "sexual",
-                "attacks",
-                "sex"
+                'executes',
+                'faith',
+                'reject',
+                'sexual',
+                'attacks',
+                'sex'
               ]
             }
           ],

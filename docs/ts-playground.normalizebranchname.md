@@ -6,7 +6,7 @@
 
 normalize `branch name`
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function normalizeBranchName(branch: string): string;
@@ -18,7 +18,7 @@ export declare function normalizeBranchName(branch: string): string;
 |  --- | --- | --- |
 |  branch | string | <code>branch name</code> |
 
-<b>Returns:</b>
+**Returns:**
 
 string
 
